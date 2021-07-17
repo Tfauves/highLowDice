@@ -16,10 +16,8 @@ public class Die {
 
     public void roll() {
         Random diceValue = new Random();
-        int maxSideValue = 7;
+        int maxSideValue = 6;
         int minSideValue = 1;
         faceUpValue = diceValue.nextInt(maxSideValue) + minSideValue;
     }
-
-
 }
