@@ -32,22 +32,22 @@ public class Main {
 
                 if ( userGuess.equals("l") && newTotal < total) {
 
-                    System.out.println("You Win!");
+                    System.out.println("You guessed correct! You Win!");
                 } else if (userGuess.equals("l") && newTotal > total){
-                    System.out.println("You Lose");
+                    System.out.println("You Lose! Game Over!!!");
                     activeGame = false;
                 }
 
                 if ( userGuess.equals("h") && newTotal > total) {
 
-                    System.out.println("You Win!");
+                    System.out.println("You guessed correct! You Win!");
                 } else if (userGuess.equals("h") && newTotal < total) {
-                    System.out.println("You Lose!");
+                    System.out.println("You Lose! Game Over!!!");
                     activeGame = false;
                 }
 
                 if (newTotal == total) {
-                    System.out.println("Push! Sorry you Lose!");
+                    System.out.println("Push!!! Sorry you Lose! Game Over!!!");
                     activeGame = false;
                 }
             }
