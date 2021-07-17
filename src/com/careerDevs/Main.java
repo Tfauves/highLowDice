@@ -29,10 +29,11 @@ public class Main {
                 die2.roll();
                 int newTotal = die1.faceUpValue + die2.faceUpValue;
                 System.out.println(newTotal);
+
                 if ( userGuess.equals("l") && newTotal < total) {
 
                     System.out.println("You Win!");
-                } else {
+                } else if (userGuess.equals("l") && newTotal > total){
                     System.out.println("You Lose");
                     activeGame = false;
                 }
@@ -40,22 +41,16 @@ public class Main {
                 if ( userGuess.equals("h") && newTotal > total) {
 
                     System.out.println("You Win!");
-                } else {
+                } else if (userGuess.equals("h") && newTotal < total) {
                     System.out.println("You Lose!");
                     activeGame = false;
                 }
+
+                if (newTotal == total) {
+                    System.out.println("Push! Sorry you Lose!");
+                    activeGame = false;
+                }
             }
-
-//            if (total < 5) {
-//
-//                activeGame = false;
-//            } else {
-//                activeGame = true;
-//
-//            }
-
-
-
 
         }
 
