@@ -45,13 +45,11 @@ public class Main {
                     winStreak = winStreak + 1;
 
                 } else if (userGuess.equals("h") && newTotal < total) {
-                    System.out.println("You Lose! Game Over!!!");
                     System.out.println("You Lose! Game Over!!!\n" + "Your win streak: " + winStreak);
                     activeGame = false;
                 }
 
                 if (newTotal == total) {
-                    System.out.println("Push!!! Sorry you Lose! Game Over!!!");
                     System.out.println("You Lose! Game Over!!!\n" + "Your win streak: " + winStreak);
                     activeGame = false;
                 }
