@@ -19,7 +19,8 @@ public class Main {
             int winStreak = 0;
 
             while (activeGame) {
-                //System.out.println("Winstreak: " + winStreak);
+                if (winStreak %5 == 0 && winStreak > 0)
+                    System.out.println("On Fire " + winStreak + " correct guesses in a row! Keep it going.");
                 die1.roll();
                 die2.roll();
                 int total = die1.faceUpValue + die2.faceUpValue;
@@ -50,7 +51,7 @@ public class Main {
                 }
 
                 if (newTotal == total) {
-                    System.out.println("You Lose! Game Over!!!\n" + "Your win streak: " + winStreak);
+                    System.out.println("Push!!! too bad you Lose. Game Over!!!\n" + "Your win streak: " + winStreak);
                     activeGame = false;
                 }
             }
