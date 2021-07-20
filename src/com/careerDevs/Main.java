@@ -7,8 +7,9 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter (s)tart: ");
+        System.out.println("Let's play some high low. Enter (s) to Start: ");
         String start = scanner.next();
+
         if (start.equals("s")) {
 
             boolean activeGame = true;
