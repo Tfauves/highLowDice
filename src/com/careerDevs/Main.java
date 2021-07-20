@@ -32,7 +32,7 @@ public class Main {
 
                 if (newTotal == total) {
                     System.out.println("Push!!! too bad you Lose. Game Over!!!\n" + "Your win streak: " + winStreak);
-                    activeGame = false;
+                    break;
                 }
 
                 if ( userGuess.equals("l") && newTotal < total) {
@@ -40,9 +40,9 @@ public class Main {
                     total = newTotal;
                     winStreak = winStreak + 1;
 
-                } else if (userGuess.equals("l") && newTotal > total){
+                } else if (userGuess.equals("l")){
                     System.out.println("You Lose! Game Over!!!\n" + "Your win streak: " + winStreak);
-                    activeGame = false;
+                    break;
                 }
 
                 if ( userGuess.equals("h") && newTotal > total) {
@@ -50,9 +50,9 @@ public class Main {
                     total = newTotal;
                     winStreak = winStreak + 1;
 
-                } else if (userGuess.equals("h") && newTotal < total) {
+                } else if (userGuess.equals("h")) {
                     System.out.println("You Lose! Game Over!!!\n" + "Your win streak: " + winStreak);
-                    activeGame = false;
+                    break;
                 }
 
             }
