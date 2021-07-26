@@ -32,10 +32,9 @@ public class HighLow {
                 newTotal = die1.faceUpValue + die2.faceUpValue;
                 System.out.println(newTotal);
 
-//                if (newTotal == total) {
-//                    System.out.println("Push!!! too bad you Lose. Game Over!!!\n" + "Your win streak: " + winStreak);
-//                    break;
-//                }
+                if (newTotal == total) {
+                    System.out.println("Push!!! no points awarded, keep guessing" + "Your win streak: " + player.winStreak);
+                }
 
                 if ( userGuess.equals("l") && newTotal < total) {
                     System.out.println("You guessed correct! You Win!");
@@ -43,22 +42,19 @@ public class HighLow {
                     player.winStreak = player.winStreak + 1;
 
                 } else if (userGuess.equals("l")){
-                    System.out.println("You Lose! Game Over!!!\n" + "Your win streak: " + player.winStreak);
-                    break;
+                    System.out.println("Incorrect, points deducted\n" + "Your win streak: " + player.winStreak);
+                    player.winStreak = 0;
                 }
 
                 if ( userGuess.equals("h") && newTotal > total) {
-                    System.out.println("You guessed correct! You Win!");
+                    System.out.println("You Win points awarded!");
                     total = newTotal;
                     player.winStreak = player.winStreak + 1;
 
                 } else if (userGuess.equals("h")) {
-                    System.out.println("You Lose! Game Over!!!\n" + "Your win streak: " + player.winStreak);
-                    break;
+                    System.out.println("Incorrect, points deducted\n" + "Your win streak: " + player.winStreak);
+
                 }
-
-
-
         }
     }
 
